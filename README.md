@@ -42,19 +42,6 @@
 - 🎯 **UX/UI professionale** con feedback visivi
 - ⚡ **Performance ottimizzate** e caricamento veloce
 
----
-
-## 🚀 Demo Screenshot
-
-<div align="center">
-
-| Login Page | Registration | User Dashboard |
-|------------|--------------|----------------|
-| ![Login](https://via.placeholder.com/250x180/74ebd5/ffffff?text=Login+Page) | ![Register](https://via.placeholder.com/250x180/ACB6E5/ffffff?text=Registration) | ![Dashboard](https://via.placeholder.com/250x180/74ebd5/ffffff?text=User+Area) |
-
-</div>
-
----
 
 ## 🛠️ Tecnologie Utilizzate
 
@@ -104,8 +91,8 @@
 
 ```bash
 # 1. Clona il repository
-git clone https://github.com/tuousername/login-system.git
-cd login-system
+git clone https://github.com/Dreessy/italian_register_login_portfolio
+cd italian_register_login_portfolio
 
 # 2. Configura il database
 mysql -u root -p < database.sql
