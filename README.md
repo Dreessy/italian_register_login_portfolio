@@ -15,6 +15,9 @@
 </div>
 
 ---
+## IMPORTANTE!:
+Se vuoi scaricare il progetto importante eliminare index.html essendo una pagina demo! Il file principale da avviare é index.php tramite stringa di comando!
+---
 
 ## 🌟 Caratteristiche Principali
 
