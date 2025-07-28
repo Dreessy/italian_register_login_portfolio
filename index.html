@@ -145,6 +145,74 @@
             transform: translateY(-2px);
         }
 
+        .form-demo {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            animation: slideDown 0.3s ease;
+        }
+
+        .form-demo h3 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #74ebd5;
+            box-shadow: 0 0 0 3px rgba(116, 235, 213, 0.1);
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .button.secondary {
+            background: linear-gradient(90deg, #ccc 0%, #999 100%);
+        }
+
+        .button.secondary:hover {
+            background: linear-gradient(90deg, #999 0%, #ccc 100%);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -241,12 +309,51 @@
         </div>
 
         <div class="demo-buttons">
-            <button class="button demo-button login-demo" onclick="showDemo('login')">
+            <button class="button demo-button login-demo" onclick="showLoginForm()">
                 🔑 Prova Login Demo
             </button>
-            <button class="button demo-button register-demo" onclick="showDemo('register')">
+            <button class="button demo-button register-demo" onclick="showRegisterForm()">
                 📝 Prova Registrazione Demo
             </button>
+        </div>
+
+        <!-- Login Form Demo -->
+        <div id="loginForm" class="form-demo" style="display: none;">
+            <h3>🔑 Login Demo</h3>
+            <form onsubmit="handleLoginSubmit(event)">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Inserisci username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Inserisci password" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="button">🚀 Accedi</button>
+                    <button type="button" class="button secondary" onclick="hideAllForms()">❌ Annulla</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Register Form Demo -->
+        <div id="registerForm" class="form-demo" style="display: none;">
+            <h3>📝 Registrazione Demo</h3>
+            <form onsubmit="handleRegisterSubmit(event)">
+                <div class="input-group">
+                    <label for="reg_username">Username:</label>
+                    <input type="text" id="reg_username" name="username" placeholder="Scegli un username" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg_password">Password:</label>
+                    <input type="password" id="reg_password" name="password" placeholder="Crea una password" required>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="button">✅ Registrati</button>
+                    <button type="button" class="button secondary" onclick="hideAllForms()">❌ Annulla</button>
+                </div>
+            </form>
         </div>
 
         <div class="features">
@@ -287,6 +394,31 @@
 
     <script>
         function showDemo(type) {
+            document.getElementById('demoModal').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            hideAllForms();
+            document.getElementById('loginForm').style.display = 'block';
+        }
+
+        function showRegisterForm() {
+            hideAllForms();
+            document.getElementById('registerForm').style.display = 'block';
+        }
+
+        function hideAllForms() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'none';
+        }
+
+        function handleLoginSubmit(event) {
+            event.preventDefault();
+            document.getElementById('demoModal').style.display = 'block';
+        }
+
+        function handleRegisterSubmit(event) {
+            event.preventDefault();
             document.getElementById('demoModal').style.display = 'block';
         }
 
