@@ -10,7 +10,7 @@
 
 **Un sistema di autenticazione completo e sicuro sviluppato in PHP con design moderno e funzionalità avanzate**
 
-[Demo Live](#) • [Documentazione](#caratteristiche) • [Installazione](#installazione)
+
 
 </div>
 
