@@ -204,7 +204,7 @@ login-system/
 
 ## 📄 Licenza
 
-Questo progetto è distribuito sotto licenza MIT. Vedi `LICENSE` per maggiori informazioni.
+Questo progetto è stato creato per **opportunità lavorative** e come dimostrazione delle competenze di sviluppo web. È disponibile per la valutazione da parte di potenziali datori di lavoro e collaboratori.
 
 ---
 
